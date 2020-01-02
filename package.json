@@ -1,0 +1,26 @@
+{
+  "name": "zhipin",
+  "version": "0.0.3",
+  "description": "simple javascript api for boss zhipin",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/song940/zhipin.git"
+  },
+  "keywords": [
+    "zhipin"
+  ],
+  "author": "Lsong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/song940/zhipin/issues"
+  },
+  "homepage": "https://github.com/song940/zhipin#readme",
+  "directories": {
+    "example": "example",
+    "test": "test"
+  }
+}
