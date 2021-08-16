@@ -50,7 +50,7 @@ const zhipin = ({ cookie }) => {
     'sec-fetch-mode': 'cors',
     'sec-fetch-site': 'same-origin',
     'authority': 'www.zhipin.com',
-    'referer': 'https://www.zhipin.com/vue/index/',
+    'referer': 'https://www.zhipin.com',
     'x-requested-with': 'XMLHttpRequest',
     'x-anti-request-token': 'd41d8cd98f00b204e9800998ecf8427e',
     'content-type': 'application/x-www-form-urlencoded',
@@ -72,11 +72,11 @@ const zhipin = ({ cookie }) => {
       const query = qs.stringify(Object.assign({
         page: 1,
         type: 0,
-        status: 0,
+        position: 0,
         searchStr: keyword,
         _: Date.now()
       }, options));
-      const url = `https://www.zhipin.com/wapi/zpboss/h5/job/joblist/data.json?${query}`;
+      const url = `https://www.zhipin.com/wapi/zpjob/job/data/list?${query}`;
       return Promise
         .resolve()
         .then(() => get(url, headers))
@@ -107,7 +107,7 @@ const zhipin = ({ cookie }) => {
         intention: -1,
         switchJobFrequency: -1,
       }, options));
-      const url = `https://www.zhipin.com/wapi/zpboss/h5/boss/recommendGeekList?${query}`;
+      const url = `https://www.zhipin.com/wapi/zpjob/rec/geek/list?${query}`;
       return Promise
         .resolve()
         .then(() => get(url, headers))

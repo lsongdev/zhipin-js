@@ -1,6 +1,6 @@
 {
   "name": "zhipin",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "simple javascript api for boss zhipin",
   "main": "index.js",
   "scripts": {

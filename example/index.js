@@ -1,5 +1,5 @@
 const zhipin = require('..')({
-  cookie: 'wt=4PD4GtFCwhqAUQvh;'
+  cookie:  `wt2=Dr6YuKBN3hd9j2zHO0k24HXHvczp_ffFUfsLBrkCYt9aGAzZksN_zaF2swiGi1hdSNjIpunpnQNScdhp8Z0OkKA~~; `
 });
 
 (async () => {
@@ -9,14 +9,14 @@ const zhipin = require('..')({
   const { encryptJobId } = job;
   const { geekList } = await zhipin.list(encryptJobId);
   
-  geekList.forEach(geek => {
-    console.log(geek.geekCard);
-  });
+  // geekList.forEach(geek => {
+  //   console.log(geek.geekCard);
+  // });
 
-  // const [ geek ] = geekList;
+  const [ geek ] = geekList;
 
-  // const resp = await zhipin.greeting(jobId, geek);
-  // console.log(resp);
+  const resp = await zhipin.greeting(encryptJobId, geek);
+  console.log(resp);
 
   // console.log(_geek);
 
